@@ -25,6 +25,7 @@ enum STEPS {
 const RentModal = () => {
     const rentModal = useRentModal();
     const [step, setStep] = useState(STEPS.CATEGORY);
+    const [isLoading, setIsLoading]= useState(true);
 
     const { 
         register,
@@ -190,7 +191,7 @@ const RentModal = () => {
                  <Input 
                   id="title"
                   label="Title"
-                //   disabled={isLoading} 
+                  disabled={isLoading} 
                   register={register}
                   errors={errors}
                   required
