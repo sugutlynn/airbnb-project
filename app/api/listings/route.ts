@@ -36,7 +36,7 @@ export async function POST(
             title,
             description,
             imageSrc,
-            // category,
+            category,
             roomCount,
             bathroomCount,
             guestCount,
