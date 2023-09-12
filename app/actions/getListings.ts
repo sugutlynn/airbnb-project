@@ -32,7 +32,7 @@ export default async function getListings(
       query.userId = userId;
     }
 
-    if (category !== null && category !== undefined) {
+    if (category !== undefined && category !== null) {
       query.category = category;
     }
 
