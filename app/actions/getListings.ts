@@ -86,6 +86,7 @@ export default async function getListings(
 
     const safeListings = listings.map((listing) => ({
       ...listing,
+      category: listing.category || "DefaultCategory",
       createdAt: listing.createdAt.toISOString(),
     }));
 
