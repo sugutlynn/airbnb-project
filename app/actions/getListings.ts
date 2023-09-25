@@ -32,10 +32,6 @@ export default async function getListings(
       query.userId = userId;
     }
 
-    if (category) {
-      query.category = category;
-    }
-
     if (roomCount) {
       query.roomCount = {
         gte: +roomCount
@@ -86,7 +82,6 @@ export default async function getListings(
 
     const safeListings = listings.map((listing) => ({
       ...listing,
-      category: listing.category || "DefaultCategory",
       createdAt: listing.createdAt.toISOString(),
     }));
 
