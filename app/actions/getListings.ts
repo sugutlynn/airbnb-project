@@ -17,6 +17,7 @@ export default async function getListings(
   try {
     const {
       userId,
+      category,
       roomCount, 
       guestCount, 
       bathroomCount, 
@@ -28,6 +29,10 @@ export default async function getListings(
     let query: any = {};
 
     if (userId) {
+      query.userId = userId;
+    }
+
+    if (category) {
       query.userId = userId;
     }
 
